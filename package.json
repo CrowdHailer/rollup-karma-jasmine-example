@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run -s test:build && npm run -s test:run",
+    "test:build": "rollup ./test/main.js > test/bundle.js",
+    "test:run": "karma start"
   },
   "author": "",
   "license": "BSD-2-Clause",
