@@ -20,6 +20,8 @@
     "jasmine": "~2.3.2",
     "karma": "~0.13.15",
     "chokidar-cli": "~1.1.1",
-    "karma-notify-reporter": "~0.1.1"
+    "karma-notify-reporter": "~0.1.1",
+    "phantomjs": "~1.9.18",
+    "karma-phantomjs-launcher": "~0.2.1"
   }
 }
