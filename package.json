@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run -s test:build && npm run -s test:run",
     "test:build": "rollup ./test/main.js > test/bundle.js",
-    "test:run": "karma start"
+    "test:run": "karma start",
+    "build": "rollup --format iife --name calculator ./src/calculator.js > index.js"
   },
   "author": "",
   "license": "BSD-2-Clause",
