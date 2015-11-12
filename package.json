@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run -s test:build && npm run -s test:run",
-    "test:build": "rollup ./test/main.js > test/bundle.js",
+    "test": "npm run -s test:bundle && npm run -s test:run",
+    "test:watch": "chokidar '**/*.js' -i '**/bundle.js' -c 'npm -s test'",
+    "test:bundle": "rollup ./test/main.js > test/bundle.js",
     "test:run": "karma start",
     "build": "rollup --format iife --name calculator ./src/calculator.js > index.js"
   },
@@ -17,6 +18,8 @@
     "karma-jasmine": "~0.3.6",
     "rollup": "~0.20.5",
     "jasmine": "~2.3.2",
-    "karma": "~0.13.15"
+    "karma": "~0.13.15",
+    "chokidar-cli": "~1.1.1",
+    "karma-notify-reporter": "~0.1.1"
   }
 }
